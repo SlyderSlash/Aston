@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title>Base JavaScript</title>
+    <meta name="description" content="Ceci est un site"/>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>Base JavaScript</h1>
+    <div id="message">
+        <p>Bonjour, je suis un paragraphe simple</p>
+    </div>
+    <script>
+        const divMessage = document.querySelector('#message')
+        console.log('Réponse de HasChildNodes')
+        console.log(divMessage.hasChildNodes())
+        console.log(divMessage)
+        divMessage.style.color = 'blue'
+        divMessage.outerHTML = `<h2>Hello There</h2>`
+    </script>
+</body>
