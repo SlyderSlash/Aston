@@ -31,9 +31,11 @@ const getWeather = (lon, lat) => {
         res.json()
             .then(res => {
                 console.log(res)
-                //On réc
+                //On récupère l'élément container
                 const container = document.getElementById("apiContainer")
+                // on créer un élément
                 const divCard = document.createElement('div')
+                // On intègre le code de la card
                 divCard.innerHTML = `
                 <div class="col-md-4">
                     <div class="card">
