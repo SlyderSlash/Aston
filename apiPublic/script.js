@@ -31,6 +31,22 @@ const getWeather = (lon, lat) => {
         res.json()
             .then(res => {
                 console.log(res)
+                //On réc
+                const container = document.getElementById("apiContainer")
+                const divCard = document.createElement('div')
+                divCard.innerHTML = `
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://placehold.co/600x400" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${res.city.name}</h5>
+                            <p class="card-text">Le soleil se lève à ${res.ephemeride.sunrise}</p>
+                            <a href="#" class="btn btn-primary">${res.city.cp}</a>
+                        </div>
+                    </div>
+                </div>
+                `
+                container.append(divCard)
             })
             .catch(err => {
                 console.error(err)
